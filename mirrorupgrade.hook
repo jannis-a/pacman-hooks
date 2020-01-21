@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = pacman-mirrorlist
+
+[Action]
+Description = Updating pacman-mirrorlist with reflector and removing pacnew...
+When = PostTransaction
+Depends = reflector
+Exec = /bin/sh -c 'FILE=/etc/pacman.d/mirrorlist; reflector -c Germany -l 10 -a 12 -p https --sort rate --save $FILE && rm -f ${FILE}.pacnew'
+

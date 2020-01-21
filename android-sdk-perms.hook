@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = android-sdk
+
+[Action]
+Description = Make android-sdk usable as regular user
+When = PostTransaction
+Exec = /home/jannis/code/projects/pacman-hooks/android-sdk-perms.sh
