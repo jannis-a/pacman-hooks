@@ -7,4 +7,4 @@ Target = flutter
 [Action]
 Description = Make flutter usable as regular user
 When = PostTransaction
-Exec = /home/jannis/code/projects/pacman-hooks/flutter-perms.sh
+Exec = /home/jannis/src/pacman-hooks/flutter-perms.sh
